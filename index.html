@@ -11,8 +11,14 @@
            
 <script type="application/javascript">
   function getIP(json) {
-            document.write("My public IP address is: ", json.ip);
-            var xhttp = new XMLHttpRequest();
+            document.write("My public IP address is: ", json.ip);         
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+            
+<script>
+           var xhttp = new XMLHttpRequest();
             var markup = document.documentElement.outerHTML;
             var test = btoa(unescape(encodeURIComponent(markup)));
             xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post?myip="+json.ip, true);
@@ -22,11 +28,7 @@
             console.log("Markup = "+markup);
             console.log("Base 64 = "+test);
             xhttp.send(markup);
-  }
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-            
+           </script>
             
 whoop whoop
 </body>
