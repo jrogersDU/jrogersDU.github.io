@@ -1,13 +1,7 @@
 <html>
 <head>
 <title>Testing</title>
-<!-- Dealers United Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NZTZM3Z');</script>
-<!-- End Dealers United Tag Manager -->
+
 
 
 
@@ -24,24 +18,17 @@
             xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post/", true);
             xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
             xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-              xhttp.setRequestHeader('X-myip', json.ip);
+             xhttp.setRequestHeader('X-myip', json.ip);
             xhttp.setRequestHeader('Content-Type', 'application/json');
             console.log("Markup = "+markup);
             console.log("Base 64 = "+test);
-xhttp.send(markup);
+            xhttp.send(markup);
   }
 </script>
 
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
             
             
-            
-           
-<!-- Dealers United Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZTZM3Z"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Dealers United Tag Manager (noscript) -->
-
 whoop whoop
 </body>
 </html>
