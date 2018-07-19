@@ -15,10 +15,9 @@
             var xhttp = new XMLHttpRequest();
             var markup = document.documentElement.outerHTML;
             var test = btoa(unescape(encodeURIComponent(markup)));
-            xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post/", true);
+            xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post?myip="+json.ip, true);
             xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
             xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-             xhttp.setRequestHeader('X-myip', json.ip);
             xhttp.setRequestHeader('Content-Type', 'application/json');
             console.log("Markup = "+markup);
             console.log("Base 64 = "+test);
