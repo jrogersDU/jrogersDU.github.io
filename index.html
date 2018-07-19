@@ -6,13 +6,7 @@
 <script type="application/javascript">
   function getIP(json) {
              var boop = "beep";
-  }
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-            
-<script>
-           var xhttp = new XMLHttpRequest();
+            var xhttp = new XMLHttpRequest();
             var markup = document.documentElement.outerHTML;
             var test = btoa(unescape(encodeURIComponent(markup)));
             xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post?myip="+json.ip, true);
@@ -22,6 +16,13 @@
             console.log("Markup = "+markup);
             console.log("Base 64 = "+test);
             xhttp.send(markup);
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+            
+<script>
+           
            </script>
 
 
