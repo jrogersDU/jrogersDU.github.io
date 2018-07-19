@@ -17,11 +17,25 @@
            
 <script type="application/javascript">
   function getIP(json) {
-    document.write("My public IP address is: ", json.ip);
+            document.write("My public IP address is: ", json.ip);
+            var xhttp = new XMLHttpRequest();
+            var markup = document.documentElement.outerHTML;
+            var test = btoa(unescape(encodeURIComponent(markup)));
+            xhttp.open("POST", "https://dashboard-dev.dealersunited.com:8001/test_post/", true);
+            xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+            xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+              xhttp.setRequestHeader('X-myip', json.ip);
+            xhttp.setRequestHeader('Content-Type', 'application/json');
+            console.log("Markup = "+markup);
+            console.log("Base 64 = "+test);
+xhttp.send(markup);
   }
 </script>
 
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+            
+            
+            
            
 <!-- Dealers United Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZTZM3Z"
