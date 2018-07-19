@@ -14,6 +14,15 @@
 
 </head>
 <body>
+           
+<script type="application/javascript">
+  function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+           
 <!-- Dealers United Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZTZM3Z"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
